@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لعبة XO مع الأصدقاء</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>لعبة XO متقدمة</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- باقي محتوى HTML كما هو -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        // كود الجافاسكريبت الأصلي يبقى كما هو
-    </script>
+    <div class="container">
+        <h1>لعبة إكس أو (XO)</h1>
+
+        <div id="status" class="status">دور اللاعب X</div>
+
+        <div id="board" class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button id="restartBtn" class="restart-btn">إعادة اللعب</button>
+
+        <div class="scores">
+            <h2>النتائج</h2>
+            <div><span class="player-x">اللاعب X:</span> <span id="scoreX">0</span></div>
+            <div><span class="player-o">اللاعب O:</span> <span id="scoreO">0</span></div>
+            <div>التعادل: <span id="scoreDraw">0</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
